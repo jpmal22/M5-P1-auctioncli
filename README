@@ -1,0 +1,54 @@
+# Auction CLI
+
+Auction CLI is a command-line interface application developed to manage auction items. It allows users to add, update, remove, and list auction items in a MongoDB database via a straightforward command-line interface.
+
+## Features
+
+- **Add Auction Items**: Interactively add new items to the auction.
+- **Update Auction Items**: Update existing items by specifying their ID.
+- **Remove Auction Items**: Remove items by their ID with confirmation.
+- **Find Auction Items**: Search for an item by its title.
+- **List All Auction Items**: Display all auction items stored in the database.
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+- Node.js installed on your machine
+- MongoDB running locally or remotely with access details
+- Git (optional) for version control
+
+## Installation
+
+Follow these steps to get your development environment set up:
+
+1. **Clone the repository** (if using Git):
+   ```bash
+   git clone https://github.com/your-username/auction-cli.git
+   cd auction-cli
+
+2. **Install dependencies**
+
+npm install
+
+## Usage
+```bash
+./commands.js add
+
+./commands.js update <id>
+
+./commands.js remove <id>
+
+./commands.js list
+
+./commands.js find <title>
+
+
+**Contact**: Contact me at jpmalejandro@hotmail.com for any queries
+
+
+
+
+
+
+
+
