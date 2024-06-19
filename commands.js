@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { program } from 'commander';
-import { addAuctionItem, findAuctionItem, removeAuctionItem, updateAuctionItem, listAuctionItems } from './index.js';
+import { addAuctionItem, findAuctionItem, removeAuctionItem, updateAuctionItem, listAuctionItems, seedAuctionItems } from './index.js';
 import inquirer from 'inquirer';
 
 const questions = [
@@ -122,6 +122,19 @@ program
             }
         } catch (err) {
             console.error('Failed to list auction items:', err);
+        }
+    });
+
+program
+    .command('seed')
+    .alias('s')
+    .description('Seed the database with initial auction items')
+    .action(async () => {
+        try {
+            await seedAuctionItems();
+            console.log('Database has been seeded successfully.');
+        } catch (err) {
+            console.error('Failed to seed database:', err);
         }
     });
 

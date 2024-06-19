@@ -9,6 +9,7 @@ Auction CLI is a command-line interface application developed to manage auction 
 - **Remove Auction Items**: Remove items by their ID with confirmation.
 - **Find Auction Items**: Search for an item by its title.
 - **List All Auction Items**: Display all auction items stored in the database.
+- **Seed Auction Items**: Populate the database with a predefined set of auction items.
 
 ## Prerequisites
 
@@ -23,7 +24,7 @@ Follow these steps to get your development environment set up:
 
 1. **Clone the repository** (if using Git):
    ```bash
-   git clone https://github.com/your-username/auction-cli.git
+   git clone https://github.com/jpmal22/M5-P1-auctioncli.git
    cd auction-cli
 
 2. **Install dependencies**
@@ -41,6 +42,8 @@ npm install
 ./commands.js list
 
 ./commands.js find <title>
+
+./commands.js seed
 
 
 **Contact**: Contact me at jpmalejandro@hotmail.com for any queries

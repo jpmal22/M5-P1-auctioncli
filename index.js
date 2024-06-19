@@ -77,4 +77,32 @@ export const listAuctionItems = async () => {
     }
 };
 
+//function to seed many aution items into the db
+export const seedAuctionItems = async () => {
+    const auctionItems = [
+        { title: "Camera", description: "Fujifil Xt4 2021 in excellent working condition.", start_price: 2500, reserve_price: 2750 },
+        { title: "Vinyl Record", description: "Original pressing 1977 of Rumours by Fleetwood Mac.", start_price: 250, reserve_price: 300 },
+        { title: "Antique Clock", description: "18th century wall clock.", start_price: 600, reserve_price: 800 },
+        { title: "Art Sculpture", description: "Replica abstract sculpture by Len Lye", start_price: 1500, reserve_price: 2500 },
+        { title: "Signed Sports Memorabilia", description: "Basketball signed by Michael Jordan.", start_price: 2500, reserve_price: 5000 },
+        { title: "First Edition Classic Book", description: "First edition of 'To Kill a Mockingbird'.", start_price: 800, reserve_price: 1600 },
+        { title: "Coin Collection", description: "Set of rare silver coins from the Roman Empire.", start_price: 1200, reserve_price: 2400 },
+        { title: "Vintage Wine Bottle", description: "Bottle of wine from 1920s.", start_price: 700, reserve_price: 1400 },
+        { title: "Luxury Watch", description: "1950 Vinatge Rolex Oyster", start_price: 3000, reserve_price: 6000 },
+        { title: "Designer Handbag", description: "Limited edition handbag by a famous fashion designer.", start_price: 1100, reserve_price: 2200 }
+    ];
+
+    try {
+        const result = await AuctionItem.insertMany(auctionItems);
+        console.log(`${result.length} items have been successfully seeded.`);
+        return result;
+    } catch (error) {
+        console.error('Error seeding auction items:', error);
+        throw error;
+    } finally {
+        await mongoose.connection.close();
+    }
+};
+
+
 
